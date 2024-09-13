@@ -1,0 +1,88 @@
+body {
+    background-color: #e0a44f;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100vh;
+    grid-template-areas: "nav main status";
+}
+
+header, #mainContainer, #statusContainer {
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#mainContainer {
+    grid-area: main;
+    background-color: #ffb042;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+} 
+
+#sectionStatusContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 95%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#sectionTitleWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+#sectionImageWrap {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sectionImageWrap img {
+    max-width: 100%;
+    height: auto;
+}
+
+#statusContainer {
+    grid-area: status;
+    background-color: #ffaf3eab;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+}
