@@ -1,5 +1,5 @@
 body {
-    background-color: #e0a44f;
+    background-color: #ffab34;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -41,7 +41,7 @@ nav ul li {
 
 #mainContainer {
     grid-area: main;
-    background-color: #ffb042;
+    background-color: #ffe5c0;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -51,22 +51,25 @@ nav ul li {
 #sectionStatusContainer {
     display: flex;
     align-items: center;
+    border-radius: 15px;
     justify-content: space-between;
     height: 100px;
     width: 95%;
-    background-color: #f0f0f0;
-    padding: 10px;
+    background-color: #fba15b;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 #sectionTitleWrap {
     display: flex;
     flex-direction: column;
+    color: #ffffff;
     justify-content: center;
     width: 90%;
 }
 
 #sectionImageWrap {
+    background-color: #ffa72d;
     width: 10%;
     display: flex;
     justify-content: center;
@@ -75,12 +78,13 @@ nav ul li {
 
 #sectionImageWrap img {
     max-width: 100%;
+    max-height: 100%;
     height: auto;
 }
 
 #statusContainer {
+    background-color: #ffd8a1;
     grid-area: status;
-    background-color: #ffaf3eab;
     display: flex;
     justify-content: center;
     align-items: start;
