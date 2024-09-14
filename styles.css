@@ -6,7 +6,6 @@ body {
     grid-template-areas: "nav main status";
 }
 
-
 header {
     grid-area: nav;
     display: flex;
@@ -17,6 +16,10 @@ header {
 header img {
     max-width: 100%;
     height: auto;
+}
+
+#navContainer {
+    position: fixed;
 }
 
 nav ul {
@@ -33,6 +36,14 @@ nav ul li {
     margin: 10px 0;
 }
 
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ff5100;
+}
+
 #mainContainer {
     grid-area: main;
     background-color: #ffe5c0;
@@ -42,22 +53,30 @@ nav ul li {
     text-align: center;
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
-} 
+    margin-top: 40px;
+}
 
-#sectionStatusContainer {
+#sectionStatusBg {
     position: fixed;
-    top: 10px;
+    top: 0px;
     left: 25.3%;
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-    justify-content: space-between;
+    background-color: #ffab34;
     height: 100px;
     width: 49.3%;
-    background-color: #fba15b;
-    box-sizing: border-box;
+    z-index: 20;
+}
+
+#sectionStatusContainer {
+    margin-top: 50px;
+    padding: 20px 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: #ff5100;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 #sectionTitleWrap {
@@ -69,7 +88,7 @@ nav ul li {
 }
 
 #sectionImageWrap {
-    background-color: #ffa72d; 
+    background-color: #ff5100; 
     height: 100%;
     width: 10%;
     display: flex;
@@ -87,30 +106,98 @@ nav ul li {
     width: 100%;
     margin-top: 100px;
     box-sizing: border-box;
-    border:5px solid rgb(255, 146, 57);
 }
 
 .unit {
     border-width: 0px 0px 5px 0px;
     border-style: solid;
-    margin: 10px auto 10px auto;
+    margin: 10px auto;
     width: 90%;
     height: auto;
     box-sizing: border-box;
 }
+
 .lesson {
     height: 100px;
-    align-content: center;
-}
-.lesson img {
-    height:  50%;
-}
-
-#statusContainer {
-    background-color: #ffd8a1;
-    grid-area: status;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     text-align: center;
+}
+
+.lesson img {
+    height: 50%;
+}
+
+.lesson:nth-of-type(9n+1) {
+    transform: translateX(0%);
+}
+.lesson:nth-of-type(9n+2) {
+    transform: translateX(10%);
+}
+.lesson:nth-of-type(9n+3) {
+    transform: translateX(20%);
+}
+.lesson:nth-of-type(9n+4) {
+    transform: translateX(10%);
+}
+.lesson:nth-of-type(9n+5) {
+    transform: translateX(0%);
+}
+.lesson:nth-of-type(9n+6) {
+    transform: translateX(-10%);
+}
+.lesson:nth-of-type(9n+7) {
+    transform: translateX(-20%);
+}
+.lesson:nth-of-type(9n+8) {
+    transform: translateX(-10%);
+}
+.lesson:nth-of-type(9n+9) {
+    transform: translateX(0%);
+}
+
+/* Status Section Styling */
+#statusContainer {
+    grid-area: status;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;  /* Correct width for the right column */
+    height: 100vh;
+    background-color: #ffd8a1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: space-between;  /* Evenly space the buttons/images */
+    align-items: center;
+    width: 90%;  /* Same width as the status container */
+    height: 50px;
+    margin-bottom: 20px;  /* Space below the buttons */
+    background-color: #ff5100;  /* Add a background color to the container */
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#buttonContainer img {
+    width: 40px;  /* Adjust the size of the buttons or images */
+    height: 40px;
+    cursor: pointer;  /* Add a pointer cursor to indicate they're clickable */
+}
+
+#playerStatusContainer, #questContainer {
+    width: 90%;  /* Adjust to fit within the container */
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
 }
