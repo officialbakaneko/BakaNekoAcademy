@@ -1,17 +1,11 @@
 body {
     background-color: #ffab34;
-    margin: 0;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     height: 100vh;
     grid-template-areas: "nav main status";
 }
 
-header, #mainContainer, #statusContainer {
-    padding: 10px;
-    box-sizing: border-box;
-    overflow: hidden;
-}
 
 header {
     grid-area: nav;
@@ -44,18 +38,23 @@ nav ul li {
     background-color: #ffe5c0;
     display: flex;
     flex-direction: column;
-    justify-content: start;
     align-items: center;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 } 
 
 #sectionStatusContainer {
+    position: fixed;
+    top: 10px;
+    left: 25.3%;
     display: flex;
     align-items: center;
     border-radius: 15px;
     justify-content: space-between;
     height: 100px;
-    width: 95%;
+    width: 49.3%;
     background-color: #fba15b;
     box-sizing: border-box;
     overflow: hidden;
@@ -85,13 +84,26 @@ nav ul li {
 }
 
 #unitContainer {
-    width: 100%;;
+    width: 100%;
+    margin-top: 100px;
+    box-sizing: border-box;
+    border:5px solid rgb(255, 146, 57);
 }
 
 .unit {
-    margin: 10px;
-    padding: 20px;
-    border:5px solid rgb(255, 146, 57);
+    border-width: 0px 0px 5px 0px;
+    border-style: solid;
+    margin: 10px auto 10px auto;
+    width: 90%;
+    height: auto;
+    box-sizing: border-box;
+}
+.lesson {
+    height: 100px;
+    align-content: center;
+}
+.lesson img {
+    height:  50%;
 }
 
 #statusContainer {
