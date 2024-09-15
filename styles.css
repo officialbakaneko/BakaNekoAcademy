@@ -215,6 +215,43 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
+/* Health Bar Container */
+#healthBarContainer {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Health Bar */
+#healthBar {
+    width: 60%;  /* Example starting health */
+    height: 100%;
+    background-color: green;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+/* Separator lines to divide the health bar into chunks */
+.healthSeparator {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: black;  /* Color of the separator lines */
+    opacity: 0.5;
+}
+
+/* Adjusting the separator positions */
+.healthSeparator:nth-of-type(1) { left: 20%; }
+.healthSeparator:nth-of-type(2) { left: 40%; }
+.healthSeparator:nth-of-type(3) { left: 60%; }
+.healthSeparator:nth-of-type(4) { left: 80%; }
+
+
+
 /* Full-screen overlay */
 /* Full-screen overlay */
 #quizOverlay {

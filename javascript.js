@@ -23,6 +23,25 @@ document.getElementById('exitButton').addEventListener('click', function() {
     document.getElementById('quizOverlay').style.display = 'none';
 });
 
+function updateHealth(healthPercentage) {
+    const healthBar = document.getElementById('healthBar');
+    healthBar.style.width = healthPercentage + '%';
+
+    // Change color based on health percentage
+    if (healthPercentage > 70) {
+        healthBar.style.backgroundColor = 'green';
+    } else if (healthPercentage > 30) {
+        healthBar.style.backgroundColor = 'yellow';
+    } else {
+        healthBar.style.backgroundColor = 'red';
+    }
+}
+
+// Example usage: Update health to 60%
+updateHealth(80);
+
+
+
 
 
 // Example: Call this function with the desired progress percentage
