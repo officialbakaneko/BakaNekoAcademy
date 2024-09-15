@@ -25,7 +25,7 @@
 
     <!--Section 2 in middle- mainContainer-->
     <div id="mainContainer">
-        <!-- Container for section and unit -->
+                <!-- Container for section and unit -->
         <div id="sectionStatusBg">
             <div id="sectionStatusContainer">
                 <div id="sectionTitleWrap">
@@ -34,9 +34,11 @@
                 </div>
                 <div id="sectionImageWrap">
                     <img src="images/Book_Icon.png" alt="Book Icon">
+                    <span>Open Guide Book</span> <!-- Add the text next to the image -->
                 </div>
             </div>
         </div>
+
 
         <div id="unitContainer">
             <!-- Holds the container for the units -->
@@ -102,6 +104,8 @@
     </div>
 
     <div id="statusContainer">
+        <!-- Button to trigger the overlay -->
+<button id="showQuizButton">Take Quiz</button>
         <!-- New Button/Image Container -->
         <div id="buttonContainer">
             <img src="images/Book_Icon.png" alt="Button 1">
@@ -121,8 +125,40 @@
             <p>Complete 3 lessons to earn 10 coins!</p>
         </div>
     </div>
-    
-    
+
+
+        <!-- Quiz Overlay -->
+    <div id="quizOverlay">
+        <!-- Exit Button -->
+        <button id="exitButton">&times;</button>
+
+        <!-- Quiz Container -->
+        <div id="quizContainer">
+
+            <!-- Progress Bar -->
+            <div id="progressBarContainer">
+                <div id="progressBar"></div>
+            </div>
+
+            <!-- Question -->
+            <h2>What is the capital of France?</h2>
+            
+            <!-- Answer Area (Empty Horizontal Line) -->
+            <div id="answerLine"></div>
+            
+            <!-- Answer Buttons -->
+            <div id="answerButtons">
+                <button>Paris</button>
+                <button>London</button>
+                <button>Berlin</button>
+                <button>Madrid</button>
+                <button>Rome</button>
+                <button>Tokyo</button>
+                <button>New York</button>
+                <button>Beijing</button>
+            </div>
+        </div>
+    </div>
 
     <script src="javascript.js"></script>
 </body>
