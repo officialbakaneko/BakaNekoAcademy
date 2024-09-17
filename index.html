@@ -3,160 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BakaNeko Academy</title>
+    <title>Baka Neko Academy</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <!--Navigation-->
-        <div id="navContainer">
-            <img src="images/logo1.png" alt="Website Logo">
-            <nav>
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#Guild">Guild</a></li>
-                    <li><a href="#Games">Games</a></li>
-                    <li><a href="#Store">Store</a></li>
-                    <li><a href="#Settings">Settings</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!--Section 2 in middle- mainContainer-->
-    <div id="mainContainer">
-                <!-- Container for section and unit -->
-        <div id="sectionStatusBg">
-            <div id="sectionStatusContainer">
-                <div id="sectionTitleWrap">
-                    <h3>Section 1 Unit 1</h3>
-                    <h4>Fundamental Words</h4>
-                </div>
-                <div id="sectionImageWrap">
-                    <img src="images/Book_Icon.png" alt="Book Icon">
-                    <span>Open Guide Book</span> <!-- Add the text next to the image -->
-                </div>
-            </div>
-        </div>
-
-
-        <div id="unitContainer">
-            <!-- Holds the container for the units -->
-            <div class="unit">
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 1</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 2</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 3</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 4</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 5</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 6</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 7</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 8</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 9</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 10</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 11</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 12</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 13</h4>
-                </div>
-                <div class="lesson">
-                    <img src="images/Lesson_Icon.png" alt="Lesson 1 Icon">
-                    <h4>Lesson 14</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="statusContainer">
-        <!-- Button to trigger the overlay -->
-<button id="showQuizButton">Take Quiz</button>
-        <!-- New Button/Image Container -->
-        <div id="buttonContainer">
-            <img src="images/Book_Icon.png" alt="Button 1">
-            <img src="images/Book_Icon.png" alt="Button 2">
-            <img src="images/Book_Icon.png" alt="Button 3">
-            <img src="images/Book_Icon.png" alt="Button 4">
-        </div>
-        
-        <div id="playerStatusContainer">
-            <h3>Player Stats</h3>
-            <!-- Health Bar with separators -->
-             <h4>Health</h4>
-            <div id="healthBarContainer">
-                <div id="healthBar"></div>
-                <!-- Separators for the health chunks -->
-                <div class="healthSeparator" style="left: 20%;"></div>
-                <div class="healthSeparator" style="left: 40%;"></div>
-                <div class="healthSeparator" style="left: 60%;"></div>
-                <div class="healthSeparator" style="left: 80%;"></div>
-            </div>
-            <p>Money: 7g</p>
-        </div>
-    
-        <div id="questContainer">
-            <h3>Daily Quest</h3>
-            <p>Complete 3 lessons to earn 10 coins!</p>
-        </div>
+    <!--Menu Container-->
+    <div class="menu">
+        <button class="menu-btn">Read</button>
+        <button class="menu-btn">Quiz</button>
+        <button class="menu-btn">Practice</button>
     </div>
 
 
-        <!-- Quiz Overlay -->
+    <!--Quiz Container Overlay-->
     <div id="quizOverlay">
-        <!-- Exit Button -->
-        <button id="exitButton">&times;</button>
-
-        <!-- Quiz Container -->
-        <div id="quizContainer">
-
-            <!-- Progress Bar -->
+        <button id="closeButton">&times;</button>
+        <div>
             <div id="progressBarContainer">
                 <div id="progressBar"></div>
             </div>
-
-            <!-- Question -->
-            <h2>What is the capital of France?</h2>
-            
-            <!-- Answer Area (Empty Horizontal Line) -->
+            <h2 id="questionText">What is the capital of France?</h2>
             <div id="answerLine"></div>
-            
-            <!-- Answer Buttons -->
-            <div id="answerButtons">
+            <div id="choiceButtons">
                 <button>Paris</button>
                 <button>London</button>
                 <button>Berlin</button>
@@ -169,6 +37,6 @@
         </div>
     </div>
 
-    <script src="javascript.js"></script>
+
 </body>
 </html>
